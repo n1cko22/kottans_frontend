@@ -1,0 +1,133 @@
+@import './_mixin.scss';
+@import './variables.scss';
+.s-touch__contact {
+	background-color: $color-white;
+	font-family: $fontSans;
+	padding-top: 2em; 	
+
+}
+.s-touch__items-wrapper {
+    display: flex;
+    @include media-query(899px) {
+		flex-direction: column;
+	}
+	
+}
+.s-touch__header {
+	font-weight: bold;
+	font-family: $fontSans;
+	font-size: 2.4rem;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+.s-touch__item {
+	background-color: $color-white;
+	border-radius: 3px;
+	text-align: left;
+	flex: 1;
+}
+
+.s-touch__address {
+	padding: 65px 90px 94px;
+	@include media-query(899px) {
+		padding: 15px 30px 74px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.address__heading {
+	margin-top: 30px;
+	color: black;
+	font-family: $fontSans;
+	font-weight: 600;
+	font-size: 1.4rem;
+}
+
+.address__paragraph {
+    text-decoration: none;
+	margin-top: 20px;
+	font-size: 1rem;
+	color: #999999;
+	line-height: 1.4em;
+}
+
+.address__link {
+    font-family: $fontSans;
+    font-size: 1rem;
+    text-decoration: none;
+	color: inherit;
+	border-bottom: 1px dashed transparent;
+	transition: border-color $transition;
+	&:hover {
+		border-color: #999999;
+	}
+}
+
+.s-touch__form {
+	flex-basis: 365px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
+	padding: 70px 100px 95px;
+	@include media-query(899px) {
+		padding: 50px 30px 75px;
+	}
+}
+
+.form__input {
+	color: #333;
+	margin-top: 11px;
+    height: 2rem;
+    width: 600px;
+	font-size: 1rem;
+	padding-left: 1rem;
+	border: 1px solid;
+	border-radius: 0;
+	border-bottom: 1px solid #999999;
+	flex: 0 0 3rem;
+    transition: border-bottom $transition;
+    @include media-query(899px) {
+		width: 400px;
+	}
+	&:focus {
+		border-bottom: 2px solid $color-accent;
+		outline: none;
+	}
+	&:focus:invalid {
+		border-bottom: 2px solid red;
+	}
+	&:focus:valid {
+        border-bottom: 2px solid green;
+        
+    }
+}
+
+.form__input.form__message {
+	flex: 1 1 auto;
+	line-height: 1.5em;
+	padding-top: 1.6rem;
+	resize: none;
+	min-height: 10rem;
+}
+
+.form__button {
+    
+    background-color: $color-storm-grey;
+    text-decoration-color: $color-white;
+	margin-top: 30px;
+	height: 44px;
+	width: 157px;
+	font-size: 1.4rem;
+	line-height: 44px;
+	border: none;
+	transition: $transition;
+	font-weight: 600;
+	font-family: $fontSans;
+}
+.button--text__color {
+    color: $color-white
+}

@@ -1,0 +1,31 @@
+@mixin media-query($value, $operator: "max-width", $query: "screen") {
+	@media #{$query} and (#{$operator}: #{$value}) {
+		@content;
+	}
+}
+
+@mixin media-query-min-max($value-min: "0", $value-max: "9999") {
+	@media screen and (min-width : #{$value-min}) and (max-width : #{$value-max}) {
+		@content;
+	}
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+@mixin h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 52px;
+    line-height: 62px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 40px;
+}
+@mixin button-reset {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+ }

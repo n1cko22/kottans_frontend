@@ -1,0 +1,39 @@
+@import './_mixin.scss';
+@import './variables.scss';
+
+
+.footer {
+    
+    padding: 70px 0;
+
+  &__wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__contacts {
+    font-family: $fontSans;
+    font-size: 1rem;
+    letter-spacing: 0.08rem;
+    color: $color-white;
+
+    &:not(:last-of-type) {
+      padding-bottom: 6px;
+    }
+
+  }
+
+ 
+
+  @media screen and (max-width: 576px) {
+    &__wrapper {
+      width: 90%;
+    }
+
+    &__contacts {
+      font-size: 1.3rem;
+    }
+  }
+}

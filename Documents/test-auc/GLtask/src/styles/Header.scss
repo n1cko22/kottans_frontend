@@ -1,0 +1,123 @@
+
+@import './_mixin.scss';
+@import './variables.scss';
+.home {
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    background: url('../images/bg.jpg') 50% 50% no-repeat;
+    background-size: cover;
+  
+    &__top-bar {
+      padding: 30px 50px 0 10%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  
+    &__logo {
+      margin-right: auto;
+      
+    }
+  
+    &__navigation {
+      position: relative;
+    }
+  
+
+  
+    &__link {
+      display: block;
+      padding: 10px 15px;
+      transition-duration: 0.25s;
+  
+    }
+  
+    &__header-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      transform: translate(-50%, -50%);
+    }
+  
+    &__header {
+      padding-bottom: 2rem;
+      font-size: 5rem;
+      font-weight: 700;
+      letter-spacing: 0.5rem;
+    }
+  
+    &__sub-header {
+      font-size: 3rem;
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.25rem;
+    }
+  
+    @media screen and (max-width: 576px) {
+      &__top-bar {
+        padding: 30px 40px 0 40px;
+      }
+  
+      &__nav-list {
+        position: absolute;
+        z-index: 1;
+        transform: translate(75px, -60px);
+        padding-top: 80px;
+        padding-bottom: 25px;
+        width: 170px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.85);
+      }
+  
+     
+    }
+  }
+  nav {
+    width: 528px;
+    font-family: $fontSans;
+      margin-right: 20px;
+      display: flex;
+      justify-content: space-between;
+    @include media-query(899px) {
+      margin: 0 20px;
+      flex: 1 1 470px;
+    }
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include media-query(479px) {
+      justify-content: center;
+    }
+  }
+  .nav__item {
+    @include button-reset;
+    @include media-query(479px) {
+      margin: 0 10px;
+    }
+    > span {
+          font-family: $fontSans;
+          color: $color-white;
+          text-decoration: none;
+      text-transform: uppercase;
+      line-height: 52px;
+      height: 52px;
+      display: block;
+      transition: $transition;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        border-color: $color-white;;
+      }
+    }
+  }
+  .home__header {
+      font-family: $fontSans;
+      color: $color-white
+  }
+  .home__sub-header {
+      font-family: $fontSans;
+      color: $color-white
+  }

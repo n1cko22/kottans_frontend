@@ -1,0 +1,10 @@
+@import './_mixin.scss';
+
+  body {
+    background-color: #323232;
+    margin: auto;
+    width: 1200px;
+    @include media-query(899px) {
+      width: 100%;
+    }
+  }
